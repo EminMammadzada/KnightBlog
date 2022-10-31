@@ -64,11 +64,27 @@ KnightBlog is a mobile application that allows students at the University of Cen
 
 ## Wireframes
 
+### Digital Wireframes & Mockups
+
+Register Page
+
 <img src="https://i.postimg.cc/MTnw3tbv/Page-1.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+Main feed Page
 
-### [BONUS] Interactive Prototype
+<img src="https://i.postimg.cc/3Rv6DqFC/page-2.png" width=600>
+
+Full Blog Page
+
+<img src="https://i.postimg.cc/Hn0h67Kr/Page-3.png" width=600>
+
+Write a blog Page
+
+<img src="https://i.postimg.cc/022fT3KW/page-4.png" width=600>
+
+Topics page
+
+<img src="https://i.postimg.cc/0QkM6gsh/page-5.png" width=600>
 
 ## Schema 
 [This section will be completed in Unit 9]
