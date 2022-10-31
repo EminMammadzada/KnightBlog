@@ -14,7 +14,6 @@ Original App Design Project - README Template
 KnightBlog is a mobile application that allows students at the University of Central Florida to exchange ideas with their peers in a forum like format, where they are able to tag their post with the subject that it may most closely relate to.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Discussion Forum
 - **Mobile:** At first, the app would be developed for mobile, but the discussion forum format works quite well for webpages too, allowing a smooth transition to an eventual web application.
 - **Story:** Makes sure that the user has an email with a domain that comes from the University of Central Florida network, and allows user to write posts regarding student life, as well as follow tags for a specific subject that the user may find interesting. 
