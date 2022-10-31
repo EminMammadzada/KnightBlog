@@ -15,12 +15,12 @@ KnightBlog is a mobile application that allows students at the University of Cen
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Discussion Forum
+- **Mobile:** At first, the app would be developed for mobile, but the discussion forum format works quite well for webpages too, allowing a smooth transition to an eventual web application.
+- **Story:** Makes sure that the user has an email with a domain that comes from the University of Central Florida network, and allows user to write posts regarding student life, as well as follow tags for a specific subject that the user may find interesting. 
+- **Market:** The target audience is composed of students at the University of Central Florida.
+- **Habit:** Given that the main purpose of the application is to inform users about specific topics rather than connecting them, the app will not necessarily be used as a social network, therefore limiting the usage time, though the frequency in which the app is used is completely up to the user. 
+- **Scope:** At first, we could focus on simply sharing blog posts and allowing users to comment on them. Later on, we could perhaps work on a way to connect those users based on similar interests. 
 
 ## Product Spec
 
