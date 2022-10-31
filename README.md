@@ -30,8 +30,9 @@ KnightBlog is a mobile application that allows students at the University of Cen
 
 * Users register with their knights email address, username, and password
 * Users log in with their username and password
-* Users can subscribe to topics and their feed will consist of blogs that have those topics in the tags
+* Users can subscribe to topics or unsubscribe
 * Users can like or dislike blog post
+* Users can view blog posts
 * Users can write a blog post
 * Users can delete their blog post
 
@@ -42,34 +43,50 @@ KnightBlog is a mobile application that allows students at the University of Cen
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Register
+   * user registers with their knights email address, username, and password
+   
+* Login
+   * user logs in with their username or password
+   
+* Main feed
+   * User can view blog posts
+   * User can delete their blog post
+
+* Full blog post
+   * User can like or dislike blog post
+   * User can delete their blog post
+
+* Create a blog post page
+   * users can write a blog post
+
+* Topics page
+   * users can subscribe to topics or unsubscribe
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
 * Main Feed
-* New Blog
+* New Blog post
 * Topics
 
 **Flow Navigation** (Screen to Screen)
 
-* Login/Register Page
+* Login
    * Upon successful authentication user is taken to Main feed
+   * If user has no account, user clicks on "register" and is taken to Register page
+
+* Register
+   * Upon successful authentication user is taken to Main feed
+   * If user has an account, user clicks on "log in" and is taken to Login page
    
 * Main feed
    * When user taps on a blog post, that blog post is presented modally
 
-* Create a Post page
+* Create a blog post page
    * When user clicks on cancel, user is taken to main feed without publishing anything
    * When user clicks on publish, post goes live and user is taken to main feed
-
-* Topics page
 
 
 ## Wireframes
@@ -80,6 +97,10 @@ Register Page
 
 <img src="https://i.postimg.cc/MTnw3tbv/Page-1.png" width=600>
 
+Login Page
+
+<img src="https://i.postimg.cc/Xv8hK5RX/Login.png" width=600>
+
 Main feed Page
 
 <img src="https://i.postimg.cc/3Rv6DqFC/page-2.png" width=600>
@@ -88,7 +109,7 @@ Full Blog Page
 
 <img src="https://i.postimg.cc/xCZzBsw7/page3-2.png" width=600>
 
-Write a blog Page
+Create a blog post Page
 
 <img src="https://i.postimg.cc/022fT3KW/page-4.png" width=600>
 
