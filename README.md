@@ -64,7 +64,7 @@ Original App Design Project - README Template
 
 ## Wireframes
 
-<img src="https://postimg.cc/Ppn0PW7j" width=600>
+<img src="https://i.postimg.cc/MTnw3tbv/Page-1.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
