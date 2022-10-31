@@ -38,7 +38,7 @@ KnightBlog is a mobile application that allows students at the University of Cen
 **Optional Nice-to-have Stories**
 
 * Following specific authors
-* Hvaing personal profile page
+* Having personal profile page
 
 ### 2. Screen Archetypes
 
