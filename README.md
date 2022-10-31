@@ -28,13 +28,17 @@ KnightBlog is a mobile application that allows students at the University of Cen
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Users register with their knights email address, username, and password
+* Users log in with their username and password
+* Users can subscribe to topics and their feed will consist of blogs that have those topics in the tags
+* Users can like or dislike blog post
+* Users can write a blog post
+* Users can delete their blog post
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Following specific authors
+* Hvaing personal profile page
 
 ### 2. Screen Archetypes
 
