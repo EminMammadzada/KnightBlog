@@ -53,18 +53,24 @@ KnightBlog is a mobile application that allows students at the University of Cen
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Main Feed
+* New Blog
+* Topics
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login/Register Page
+   * Upon successful authentication user is taken to Main feed
+   
+* Main feed
+   * When user taps on a blog post, that blog post is presented modally
+
+* Create a Post page
+   * When user clicks on cancel, user is taken to main feed without publishing anything
+   * When user clicks on publish, post goes live and user is taken to main feed
+
+* Topics page
+
 
 ## Wireframes
 
@@ -80,7 +86,7 @@ Main feed Page
 
 Full Blog Page
 
-<img src="https://i.postimg.cc/Hn0h67Kr/Page-3.png" width=600>
+<img src="https://i.postimg.cc/xCZzBsw7/page3-2.png" width=600>
 
 Write a blog Page
 
