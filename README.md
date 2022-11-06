@@ -119,7 +119,25 @@ Topics page
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+User
+
+| Property | Type              | Description                                |
+|----------|-------------------|--------------------------------------------|
+| email    | string            | Knights email address                      |
+| username | string            | username that will be used to log users in |
+| password | string            | user's password                            |
+| posts    | [Pointer to Blog] | array of pointers to user's blog posts     |
+ 
+Blog
+
+| Property  | Type            | Description                       |
+|-----------|-----------------|-----------------------------------|
+| id        | String          | id of the blog post               |
+| author    | Pointer to user | user that created the blog post   |
+| date      | Date            | creation date of the blog post    |
+| tags      | [String]        | Array of associated tags          |
+| likeCount | Number          | number of likes post has received |
+| text      | String          | content of the blog post          |
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
