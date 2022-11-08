@@ -147,9 +147,9 @@ Blog
 - (POST) Login to user's account with user's credentials  
 
 #### Main Feed Page
-- (Create/POST) Create new tags and likes on each of the posts 
+- (Create/POST) Like other posts
 - (DELETE) Delete an existing post
-- (Read/ GET) Load user's name and posts 
+- (Read/ GET) Load posts 
 
 #### Full Blog Page
 - (Read/GET) Load user's name, post name, and post details
