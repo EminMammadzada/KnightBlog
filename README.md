@@ -147,15 +147,15 @@ Blog
 - what?
 
 #### Main Feed Page
-- what?
+- (Create/POST) Create new tags and likes on each of the posts 
+- (DELETE) Delete an existing post
+- (Read/ GET) Load user's name and posts 
 
 #### Full Blog Page
-- (Read/GET) Load users name, post name, and post details
-- (Create/POST) Create a new like or dislike on a post
-- (Delete) Delete existing like or dislike
+- what?
 
 #### Create Blog Post Page
-- (Create/POST) Create a new blog post with appropriate tags
+- what?
 
 #### Topics Page
 - what?
