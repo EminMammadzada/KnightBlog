@@ -153,13 +153,18 @@ Blog
 - (Read/ GET) Load user's name and posts 
 
 #### Full Blog Page
-- what?
+- (Read/GET) Load user's name, post name, and post details
+- (Create/POST) Create a new like or dislike on a post
+- (Delete) Delete existing like or dislike
 
 #### Create Blog Post Page
-- what?
+- (Create/POST) Create a new blog post with appropriate tags
 
 #### Topics Page
-- what?
+- (Subscribe/POST) Create a subscription to a new topic
+- (Unsubscribe/POST) Cancel a subscribtion to previously chosen topic
+
+
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
