@@ -142,6 +142,7 @@ Blog
 
 #### Register Page
 - (POST) Create a new account with user's credentials 
+<img src="https://i.postimg.cc/25XCv78b/Screenshot-2022-11-08-at-4-57-48-PM.png" width=600>
 
 #### Login Page
 - (POST) Login to user's account with user's credentials  
