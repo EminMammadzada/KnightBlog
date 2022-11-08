@@ -150,10 +150,12 @@ Blog
 - what?
 
 #### Full Blog Page
-- what?
+- (Read/GET) Load users name, post name, and post details
+- (Create/POST) Create a new like or dislike on a post
+- (Delete) Delete existing like or dislike
 
 #### Create Blog Post Page
-- what?
+- (Create/POST) Create a new blog post with appropriate tags
 
 #### Topics Page
 - what?
