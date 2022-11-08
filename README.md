@@ -139,6 +139,24 @@ Blog
 | likeCount | Number          | number of likes post has received |
 | text      | String          | content of the blog post          |
 ### Networking
+
+#### Register Page
+- what?
+
+#### Login Page
+- what?
+
+#### Main Feed Page
+- what?
+
+#### Full Blog Page
+- what?
+
+#### Create Blog Post Page
+- what?
+
+#### Topics Page
+- what?
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
