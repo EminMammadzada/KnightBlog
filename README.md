@@ -142,10 +142,10 @@ Blog
 ### Networking
 
 #### Register Page
-- what?
+- (POST) Create a new account with user's credentials 
 
 #### Login Page
-- what?
+- (POST) Login to user's account with user's credentials  
 
 #### Main Feed Page
 - (Create/POST) Create new tags and likes on each of the posts 
