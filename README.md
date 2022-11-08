@@ -127,6 +127,7 @@ User
 | username | string            | username that will be used to log users in |
 | password | string            | user's password                            |
 | posts    | [Pointer to Blog] | array of pointers to user's blog posts     |
+| tags     | [String]          | list of tags user follows                  |
  
 Blog
 
