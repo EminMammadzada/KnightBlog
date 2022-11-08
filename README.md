@@ -165,6 +165,6 @@ Blog
 - (Unsubscribe/POST) Cancel a subscribtion to previously chosen topic
 
 
-- [Add list of network requests by screen ]
+## Remaining
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
