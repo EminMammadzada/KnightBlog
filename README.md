@@ -117,7 +117,6 @@ Topics page
 <img src="https://i.postimg.cc/0QkM6gsh/page-5.png" width=600>
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
 User
 
