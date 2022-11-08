@@ -151,6 +151,8 @@ Blog
 - (DELETE) Delete an existing post
 - (Read/ GET) Load posts 
 
+<img src="https://i.postimg.cc/5t4hsYkB/Screenshot-2022-11-08-at-4-47-01-PM.png" width=600>
+
 #### Full Blog Page
 - (Read/GET) Load user's name, post name, and post details
 - (Create/POST) Create a new like or dislike on a post
