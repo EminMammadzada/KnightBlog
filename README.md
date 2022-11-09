@@ -131,9 +131,9 @@ Blog
 
 | Property  | Type            | Description                       |
 |-----------|-----------------|-----------------------------------|
-| id        | String          | id of the blog post               |
+| objectId  | String          | id of the blog post               |
 | author    | Pointer to user | user that created the blog post   |
-| date      | Date            | creation date of the blog post    |
+| createdAt | Date            | creation date of the blog post    |
 | tags      | [String]        | Array of associated tags          |
 | likeCount | Number          | number of likes post has received |
 | text      | String          | content of the blog post          |
