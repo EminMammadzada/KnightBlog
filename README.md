@@ -125,16 +125,15 @@ User
 | email    | string            | Knights email address                      |
 | username | string            | username that will be used to log users in |
 | password | string            | user's password                            |
-| posts    | [Pointer to Blog] | array of pointers to user's blog posts     |
 | tags     | [String]          | list of tags user follows                  |
  
 Blog
 
 | Property  | Type            | Description                       |
 |-----------|-----------------|-----------------------------------|
-| id        | String          | id of the blog post               |
+| objectId  | String          | id of the blog post               |
 | author    | Pointer to user | user that created the blog post   |
-| date      | Date            | creation date of the blog post    |
+| createdAt | Date            | creation date of the blog post    |
 | tags      | [String]        | Array of associated tags          |
 | likeCount | Number          | number of likes post has received |
 | text      | String          | content of the blog post          |
