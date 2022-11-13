@@ -26,13 +26,13 @@
         <!--Title-->
         <scene sceneID="wyV-de-num">
             <objects>
-                <viewController id="IbK-yG-zda" sceneMemberID="viewController">
+                <viewController id="IbK-yG-zda" customClass="BlogViewController" customModule="ProjectCOP4655" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E6y-YR-oJ3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8T-HH-NP0">
-                                <rect key="frame" x="0.0" y="42" width="389" height="44"/>
+                                <rect key="frame" x="-1" y="42" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20940684649999999" green="0.13719588629999999" blue="0.25095486639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
@@ -50,13 +50,16 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="q0v-U7-aMj">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="RGs-zt-M2M">
-                                                <rect key="frame" x="288" y="4.6666666666666679" width="85" height="35"/>
+                                                <rect key="frame" x="289" y="4.6666666666666679" width="85" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Log Out">
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                             </button>
+                                            <connections>
+                                                <action selector="Logoutbutton:" destination="IbK-yG-zda" id="c9M-bI-gm2"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -110,14 +113,20 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="thumbs up"/>
+                                        <connections>
+                                            <action selector="likeButton:" destination="IbK-yG-zda" eventType="touchUpInside" id="awG-FG-eap"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCu-wk-DGe">
                                         <rect key="frame" x="75" y="570" width="47" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="thumbs down "/>
+                                        <connections>
+                                            <action selector="unlikeButton:" destination="IbK-yG-zda" eventType="touchUpInside" id="da3-AL-Z2h"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comp Sci" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efv-qx-lPP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comp Sci" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efv-qx-lPP">
                                         <rect key="frame" x="294" y="536" width="74" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.72941176470000002" green="0.60784313729999995" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -139,12 +148,18 @@
                                 <rect key="frame" x="30" y="767" width="54" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <buttonConfiguration key="configuration" style="plain" image="home"/>
+                                <connections>
+                                    <action selector="HomeButton:" destination="IbK-yG-zda" eventType="touchUpInside" id="PZk-Qi-7Cr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd7-iM-VzT">
                                 <rect key="frame" x="307" y="764" width="54" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="menu"/>
+                                <connections>
+                                    <action selector="MenuButton:" destination="IbK-yG-zda" eventType="touchUpInside" id="lgX-EZ-vUq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeU-y0-rJt">
                                 <rect key="frame" x="133" y="729" width="122" height="114"/>
@@ -152,12 +167,19 @@
                                 <inset key="contentEdgeInsets" minX="-2" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="edit" imagePlacement="top" buttonSize="small"/>
+                                <connections>
+                                    <action selector="EditButton:" destination="IbK-yG-zda" eventType="touchUpInside" id="aGR-TF-a17"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nkl-ab-Mbv"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="bcD-ff-kme"/>
+                    <connections>
+                        <outlet property="goBackButton" destination="jWO-tq-Yg1" id="cGD-K1-sHt"/>
+                        <outlet property="tags" destination="Efv-qx-lPP" id="Oug-pt-9BN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyq-6o-Jeb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,7 @@
 		5252B3E8290EE4A2008CDD30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5252B3E6290EE4A2008CDD30 /* Main.storyboard */; };
 		5252B3EA290EE4A3008CDD30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5252B3E9290EE4A3008CDD30 /* Assets.xcassets */; };
 		5252B3ED290EE4A3008CDD30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5252B3EB290EE4A3008CDD30 /* LaunchScreen.storyboard */; };
+		65A0C4782920747E00AD21C4 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A0C4772920747E00AD21C4 /* BlogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5252B3EC290EE4A3008CDD30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5252B3EE290EE4A3008CDD30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F8421C569B2C970DA44DD64 /* Pods-ProjectCOP4655.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectCOP4655.release.xcconfig"; path = "Target Support Files/Pods-ProjectCOP4655/Pods-ProjectCOP4655.release.xcconfig"; sourceTree = "<group>"; };
+		65A0C4772920747E00AD21C4 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		BF3410E3C0D3189453E25CD1 /* Pods-ProjectCOP4655.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectCOP4655.debug.xcconfig"; path = "Target Support Files/Pods-ProjectCOP4655/Pods-ProjectCOP4655.debug.xcconfig"; sourceTree = "<group>"; };
 		EADA83D1F67E9E2EA05297C8 /* Pods_ProjectCOP4655.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectCOP4655.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 				5252B3E9290EE4A3008CDD30 /* Assets.xcassets */,
 				5252B3EB290EE4A3008CDD30 /* LaunchScreen.storyboard */,
 				5252B3EE290EE4A3008CDD30 /* Info.plist */,
+				65A0C4772920747E00AD21C4 /* BlogViewController.swift */,
 			);
 			path = ProjectCOP4655;
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 				BF3410E3C0D3189453E25CD1 /* Pods-ProjectCOP4655.debug.xcconfig */,
 				5F8421C569B2C970DA44DD64 /* Pods-ProjectCOP4655.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +211,7 @@
 			files = (
 				5252B3E5290EE4A2008CDD30 /* ViewController.swift in Sources */,
 				5252B3E1290EE4A2008CDD30 /* AppDelegate.swift in Sources */,
+				65A0C4782920747E00AD21C4 /* BlogViewController.swift in Sources */,
 				5252B3E3290EE4A2008CDD30 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
