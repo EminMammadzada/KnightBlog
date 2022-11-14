@@ -12,10 +12,13 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     //var posts: [PFObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = 260
         
         tableView.delegate = self
         tableView.dataSource = self
