@@ -10,7 +10,6 @@ import Parse
 
 class BlogViewController: UIViewController {
 
-    @IBOutlet weak var goBackButton: UIBarButtonItem!
     @IBOutlet weak var tags: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,5 +49,6 @@ class BlogViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
 }

@@ -12,13 +12,9 @@ class PostCell: UITableViewCell {
     
     @IBOutlet weak var PostText: UILabel!
     @IBOutlet weak var PostName: UILabel!
-    
     @IBOutlet weak var postUserName: UILabel!
-    
     @IBOutlet weak var postUserDate: UILabel!
-    
     @IBOutlet weak var postLikes: UIButton!
-    
     @IBOutlet weak var postDislike: UIButton!
     
   

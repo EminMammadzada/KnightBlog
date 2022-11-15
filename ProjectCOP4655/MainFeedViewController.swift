@@ -39,6 +39,12 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         return cell;
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if true{
+            self.performSegue(withIdentifier: "mainToBlogSegue", sender: self)
+        }
+    }
+    
     
 
 }
