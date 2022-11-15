@@ -12,10 +12,11 @@
 		0A521A00AF40CE48096E617E /* Pods_ProjectCOP4655.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADA83D1F67E9E2EA05297C8 /* Pods_ProjectCOP4655.framework */; };
 		5252B3E1290EE4A2008CDD30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252B3E0290EE4A2008CDD30 /* AppDelegate.swift */; };
 		5252B3E3290EE4A2008CDD30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252B3E2290EE4A2008CDD30 /* SceneDelegate.swift */; };
-		5252B3E5290EE4A2008CDD30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252B3E4290EE4A2008CDD30 /* ViewController.swift */; };
 		5252B3E8290EE4A2008CDD30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5252B3E6290EE4A2008CDD30 /* Main.storyboard */; };
 		5252B3EA290EE4A3008CDD30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5252B3E9290EE4A3008CDD30 /* Assets.xcassets */; };
 		5252B3ED290EE4A3008CDD30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5252B3EB290EE4A3008CDD30 /* LaunchScreen.storyboard */; };
+		52B7614F2923182A002BBB01 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B7614E2923182A002BBB01 /* LoginViewController.swift */; };
+		52EE39832923255B005A473A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE39822923255B005A473A /* RegisterViewController.swift */; };
 		65A0C4782920747E00AD21C4 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A0C4772920747E00AD21C4 /* BlogViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,11 +26,12 @@
 		5252B3DD290EE4A2008CDD30 /* ProjectCOP4655.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectCOP4655.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5252B3E0290EE4A2008CDD30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5252B3E2290EE4A2008CDD30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5252B3E4290EE4A2008CDD30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5252B3E7290EE4A2008CDD30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5252B3E9290EE4A3008CDD30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5252B3EC290EE4A3008CDD30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5252B3EE290EE4A3008CDD30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B7614E2923182A002BBB01 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52EE39822923255B005A473A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5F8421C569B2C970DA44DD64 /* Pods-ProjectCOP4655.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectCOP4655.release.xcconfig"; path = "Target Support Files/Pods-ProjectCOP4655/Pods-ProjectCOP4655.release.xcconfig"; sourceTree = "<group>"; };
 		65A0C4772920747E00AD21C4 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		BF3410E3C0D3189453E25CD1 /* Pods-ProjectCOP4655.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectCOP4655.debug.xcconfig"; path = "Target Support Files/Pods-ProjectCOP4655/Pods-ProjectCOP4655.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,14 +81,15 @@
 			children = (
 				5252B3E0290EE4A2008CDD30 /* AppDelegate.swift */,
 				5252B3E2290EE4A2008CDD30 /* SceneDelegate.swift */,
-				5252B3E4290EE4A2008CDD30 /* ViewController.swift */,
-				5252B3E6290EE4A2008CDD30 /* Main.storyboard */,
 				03D0E90A2922CD5D0076B83A /* PostCell.swift */,
 				03D0E9062922CBF20076B83A /* MainFeedViewController.swift */,
-				5252B3E9290EE4A3008CDD30 /* Assets.xcassets */,
+				5252B3E6290EE4A2008CDD30 /* Main.storyboard */,
 				5252B3EB290EE4A3008CDD30 /* LaunchScreen.storyboard */,
 				5252B3EE290EE4A3008CDD30 /* Info.plist */,
+				5252B3E9290EE4A3008CDD30 /* Assets.xcassets */,
 				65A0C4772920747E00AD21C4 /* BlogViewController.swift */,
+				52B7614E2923182A002BBB01 /* LoginViewController.swift */,
+				52EE39822923255B005A473A /* RegisterViewController.swift */,
 			);
 			path = ProjectCOP4655;
 			sourceTree = "<group>";
@@ -215,8 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5252B3E5290EE4A2008CDD30 /* ViewController.swift in Sources */,
+				52B7614F2923182A002BBB01 /* LoginViewController.swift in Sources */,
 				03D0E9072922CBF20076B83A /* MainFeedViewController.swift in Sources */,
+				52EE39832923255B005A473A /* RegisterViewController.swift in Sources */,
 				5252B3E1290EE4A2008CDD30 /* AppDelegate.swift in Sources */,
 				65A0C4782920747E00AD21C4 /* BlogViewController.swift in Sources */,
 				5252B3E3290EE4A2008CDD30 /* SceneDelegate.swift in Sources */,
