@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -156,7 +157,7 @@
                                         <rect key="frame" x="17" y="8" width="69" height="83"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sam Dosi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC1-b0-2vo">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sam Dosi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC1-b0-2vo">
                                         <rect key="frame" x="94" y="20" width="159" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
@@ -203,20 +204,11 @@
                                             <action selector="unlikeButton:" destination="IbK-yG-zda" eventType="touchUpInside" id="da3-AL-Z2h"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comp Sci" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efv-qx-lPP">
-                                        <rect key="frame" x="294" y="536" width="74" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;likecount&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3e-p7-ZOU">
+                                        <rect key="frame" x="28" y="546" width="68" height="16"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.72941176470000002" green="0.60784313729999995" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Life advice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTx-ge-T3M">
-                                        <rect key="frame" x="199" y="536" width="82" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.72941176470000002" green="0.60784313729999995" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -227,7 +219,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="bcD-ff-kme"/>
                     <connections>
-                        <outlet property="tags" destination="Efv-qx-lPP" id="Oug-pt-9BN"/>
+                        <outlet property="postAuthor" destination="qC1-b0-2vo" id="XYv-UW-Ifp"/>
+                        <outlet property="postDate" destination="VAk-9x-F8b" id="kIK-1u-gWC"/>
+                        <outlet property="postLikes" destination="i3e-p7-ZOU" id="Vn3-AD-zYW"/>
+                        <outlet property="postText" destination="Sha-Q7-zma" id="d6T-lb-UN8"/>
+                        <outlet property="postTitle" destination="YJ2-Dd-8td" id="XDF-xL-6Cb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyq-6o-Jeb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -253,8 +249,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mistakes I made as a Computer Science student at UCF" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJp-3z-xDN">
-                                                    <rect key="frame" x="5" y="0.0" width="380" height="38.333333333333336"/>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;TITLE PLACEHOLDER&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJp-3z-xDN">
+                                                    <rect key="frame" x="5" y="0.0" width="380" height="19.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -263,7 +259,7 @@
                                                     <rect key="frame" x="5" y="149" width="51" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Josef Vodicka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRc-Jv-ncl">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;AUTHOR&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRc-Jv-ncl">
                                                     <rect key="frame" x="64" y="149" width="150" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
@@ -282,19 +278,25 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="thumbs up"/>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11/14/2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt7-JF-3zX">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;DATE&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt7-JF-3zX">
                                                     <rect key="frame" x="64" y="178" width="81" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cm-Ef-DHZ">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;PLACEHOLDER&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cm-Ef-DHZ">
                                                     <rect key="frame" x="20" y="39" width="350" height="102"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <string key="text">Barton waited twenty always repair in within we do. An delighted offending curiosity my is dashwoods at. Boy prosperous increasing surrounded companions her nor advantages sufficient put. John on time down give meet help as of. Him waiting and correct believe now cottage she another. Vexed six shy yet along learn maids her tiled. Through studied shyness evening bed him winding present. Become excuse hardly on my thirty it wanted.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;count&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFO-iU-onL">
+                                                    <rect key="frame" x="225" y="183" width="47" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -311,10 +313,10 @@
                                         <connections>
                                             <outlet property="PostName" destination="DJp-3z-xDN" id="1Gn-aF-uRE"/>
                                             <outlet property="PostText" destination="7cm-Ef-DHZ" id="F5Z-Yf-wrS"/>
-                                            <outlet property="postDislike" destination="wTJ-bu-Qut" id="69Q-ER-zoQ"/>
-                                            <outlet property="postLikes" destination="jLa-zz-HEv" id="v2W-nI-tvW"/>
-                                            <outlet property="postUserDate" destination="tt7-JF-3zX" id="ucY-M9-zAk"/>
+                                            <outlet property="likeCount" destination="yFO-iU-onL" id="0Jz-Fc-ps1"/>
+                                            <outlet property="postDate" destination="tt7-JF-3zX" id="inL-36-b3D"/>
                                             <outlet property="postUserName" destination="wRc-Jv-ncl" id="oPI-ch-ijC"/>
+                                            <segue destination="IbK-yG-zda" kind="presentation" identifier="mainToBlog" id="atz-V5-0a6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -341,7 +343,6 @@
                     <navigationItem key="navigationItem" id="PHJ-hF-q4E"/>
                     <connections>
                         <outlet property="tableView" destination="a7O-G3-FRP" id="mhk-Fs-v3W"/>
-                        <segue destination="IbK-yG-zda" kind="presentation" identifier="mainToBlogSegue" modalPresentationStyle="automatic" id="2Sc-Yt-KD1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDM-L8-pcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -367,7 +368,9 @@
                         <viewLayoutGuide key="safeArea" id="Mrn-25-hBt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="edit" id="4HX-oi-kNL"/>
+                    <tabBarItem key="tabBarItem" title="" id="4HX-oi-kNL">
+                        <imageReference key="image" image="pencil" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pA1-vN-EXZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,7 +395,9 @@
                         <viewLayoutGuide key="safeArea" id="t7J-g1-HjI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="menu" id="SVZ-Jy-MHv"/>
+                    <tabBarItem key="tabBarItem" title="" id="SVZ-Jy-MHv">
+                        <imageReference key="image" image="menucard" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMk-Ie-vxv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -517,7 +522,9 @@
         <scene sceneID="enm-md-quZ">
             <objects>
                 <navigationController id="ZRm-j9-vwq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="home" id="ENB-B3-FRT"/>
+                    <tabBarItem key="tabBarItem" title="" largeContentSizeImage="homekit" catalog="system" id="ENB-B3-FRT">
+                        <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="atN-kS-clC">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -557,14 +564,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="owR-g6-BPd"/>
+        <segue reference="otM-HF-ocz"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="edit" width="50" height="50"/>
-        <image name="home" width="50" height="50"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="icon-76" width="76" height="76"/>
         <image name="log-out" width="512" height="512"/>
-        <image name="menu" width="50" height="50"/>
+        <image name="menucard" catalog="system" width="108" height="128"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="profile" width="64" height="64"/>
         <image name="thumbs down " width="24" height="24"/>
         <image name="thumbs up" width="24" height="24"/>

@@ -10,12 +10,12 @@ import UIKit
 class PostCell: UITableViewCell {
 
     
-    @IBOutlet weak var PostText: UILabel!
-    @IBOutlet weak var PostName: UILabel!
+    @IBOutlet weak var postText: UILabel!
+    @IBOutlet weak var postName: UILabel!
     @IBOutlet weak var postUserName: UILabel!
-    @IBOutlet weak var postUserDate: UILabel!
-    @IBOutlet weak var postLikes: UIButton!
-    @IBOutlet weak var postDislike: UIButton!
+    @IBOutlet weak var postDate: UILabel!
+    @IBOutlet weak var likeCount: UILabel!
+    
     
   
     
