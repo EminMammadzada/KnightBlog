@@ -28,17 +28,6 @@ class BlogViewController: UIViewController {
         postTitle?.text = passedData["title"] as? String
         postLikes?.text = passedData["likeCount"] as? String
     }
-
-    @IBAction func Logoutbutton(_ sender: Any) {
-        print("here")
-        
-        PFUser.logOut()
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        let loginViewContoroller = main.instantiateViewController(withIdentifier: "LoginViewController")
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else {return}
-        
-        delegate.window?.rootViewController = loginViewContoroller
-    }
     
     @IBAction func likeButton(_ sender: Any) {
     }

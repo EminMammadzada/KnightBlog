@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -68,5 +69,16 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
                     return
             }
             blogViewController.passedData = posts[index] as! [String : any Hashable]
-        }
+    }
+    
+    @IBAction func onLogOutPressed(_ sender: UIBarButtonItem) {
+        PFUser.logOut()
+        
+        let main = UIStoryboard (name: "Main", bundle: nil)
+        let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let
+        delegate = windowScene.delegate as? SceneDelegate else { return }
+        delegate.window? .rootViewController = loginViewController
+    }
+    
 }
