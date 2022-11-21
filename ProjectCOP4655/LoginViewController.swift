@@ -14,19 +14,39 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var switchToRegisterButton: UIButton!
     @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        errorLabel.text = "Error"
+        errorLabel.textColor = .white
     }
     
     
     @IBAction func onLoginPressed(_ sender: UIButton) {
-        if true{
-            self.performSegue(withIdentifier: "loginToMainSegue", sender: nil)
+        
+        if usernameTextfield.text?.count == 0 || passwordTextfield.text?.count == 0{
+            self.errorLabel.text = "Error: Some fields are empty"
+            self.errorLabel.textColor = .red
         }
-       
+        
+        else{
+            let username = usernameTextfield.text!
+            let password = passwordTextfield.text!
+            
+            PFUser.logInWithUsername(inBackground: username, password: password) {(user, error) in
+                    if user != nil{
+                        self.performSegue(withIdentifier: "loginToMainSegue", sender: nil)
+                    } else{
+                        self.errorLabel.text = error?.localizedDescription ?? "smth went wrong"
+                        self.errorLabel.textColor = .red
+                    }
+                }
+            }
     }
     
     @IBAction func onSwitchToRegisterPressed(_ sender: UIButton) {
