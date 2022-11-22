@@ -7,6 +7,8 @@ target 'ProjectCOP4655' do
 
   # Pods for KnightBlog
 	pod 'Parse'
+  # pods for DropDown
+	pod 'DropDown'
 
 
 end
