@@ -13,18 +13,25 @@ class WritePostViewController: UIViewController {
     @IBOutlet weak var dropDownText: UILabel!
     @IBOutlet weak var DropDownView: UIView!
     let dropDown = DropDown()
-    let dropDownValues = ["life Advice", "computer science", "course materials"]
+    let dropDownValues = ["Business Admin", "Computer Science", "Aerospace", "Job Hunt", "Life Advice", "Other"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        dropDownText.text = "Add tags"
+        var itemSelected: [Int] = []
+        dropDownText.text = ""
         dropDown.anchorView = DropDownView
         dropDown.dataSource = dropDownValues
         dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
         dropDown.topOffset = CGPoint(x: 0, y:-(dropDown.anchorView?.plainView.bounds.height)!)
-        dropDown.direction = .bottom
+        dropDown.direction = .any
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
           print("Selected item: \(item) at index: \(index)")
-            self.dropDownText.text = dropDownValues[index]
+            itemSelected.append(index)
+            print("array is \(itemSelected)")
+            self.dropDownText.backgroundColor = UIColor.systemYellow
+            dropDownText.layer.masksToBounds = true
+            dropDownText.layer.cornerRadius = 7
+           self.dropDownText.text = dropDownValues[index]
         }
         
     
