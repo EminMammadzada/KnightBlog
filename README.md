@@ -46,6 +46,8 @@ Here's a walkthrough of the build progress:
 
 <img src='http://g.recordit.co/3iom7PjPX4.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+<img src='http://g.recordit.co/P6zhEavFF5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 ### 2. Screen Archetypes
 
 * Register
