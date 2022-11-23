@@ -7,13 +7,32 @@
 
 import UIKit
 import Parse
-
+import DropDown
 class WritePostViewController: UIViewController {
 
+    @IBOutlet weak var dropDownText: UILabel!
+    @IBOutlet weak var DropDownView: UIView!
+    let dropDown = DropDown()
+    let dropDownValues = ["life Advice", "computer science", "course materials"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        dropDownText.text = "Add tags"
+        dropDown.anchorView = DropDownView
+        dropDown.dataSource = dropDownValues
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.topOffset = CGPoint(x: 0, y:-(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.direction = .bottom
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+          print("Selected item: \(item) at index: \(index)")
+            self.dropDownText.text = dropDownValues[index]
+        }
+        
+    
     }
     
+    @IBAction func showDropDown(_ sender: Any) {
+        dropDown.show()
+    }
     @IBAction func onLogOutPressed(_ sender: UIBarButtonItem) {
         PFUser.logOut()
         
