@@ -19,7 +19,8 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 260
+        tableView.rowHeight = 240
+        
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -28,7 +29,6 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         
         let query = PFQuery(className: "Blog")
         query.includeKeys(["author", "likeCount", "text", "tags", "title", "createdAt", "objectId"])
@@ -65,6 +65,7 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         cell.postUserName.text = user.username
         cell.postDate.text = creationDate
         cell.likeCount.text = String((post["likeCount"] as? Int)!)
+        //cell.postTopic.text = post["tags"] as? String //donest work idk why
         return cell;
     }
     

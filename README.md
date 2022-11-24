@@ -134,7 +134,7 @@ User
 | email    | string            | Knights email address                      |
 | username | string            | username that will be used to log users in |
 | password | string            | user's password                            |
-| topics   | [String]          | list of topics user follows                |
+| tags     | [String]          | list of topics user follows                |
  
 Blog
 
@@ -143,9 +143,10 @@ Blog
 | objectId  | String          | id of the blog post               |
 | author    | Pointer to user | user that created the blog post   |
 | createdAt | Date            | creation date of the blog post    |
-| topics    | [String]        | Array of associated topics        |
+| tags      | [String]        | Array of associated topics        |
 | likeCount | Number          | number of likes post has received |
 | text      | String          | content of the blog post          |
+| title     | String          | content of the blog post          |
 ### Networking
 
 #### Register Page

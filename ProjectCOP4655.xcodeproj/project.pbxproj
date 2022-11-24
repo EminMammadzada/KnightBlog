@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03C85F34292EC4A00096AE34 /* customMainFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85F33292EC4A00096AE34 /* customMainFeed.swift */; };
 		03D0E9072922CBF20076B83A /* MainFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D0E9062922CBF20076B83A /* MainFeedViewController.swift */; };
 		03D0E90B2922CD5D0076B83A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D0E90A2922CD5D0076B83A /* PostCell.swift */; };
 		0A521A00AF40CE48096E617E /* Pods_ProjectCOP4655.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADA83D1F67E9E2EA05297C8 /* Pods_ProjectCOP4655.framework */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03C85F33292EC4A00096AE34 /* customMainFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customMainFeed.swift; sourceTree = "<group>"; };
 		03D0E9062922CBF20076B83A /* MainFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedViewController.swift; sourceTree = "<group>"; };
 		03D0E90A2922CD5D0076B83A /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5243FADB29241A4A000CED9E /* WritePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritePostViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				5252B3E2290EE4A2008CDD30 /* SceneDelegate.swift */,
 				03D0E90A2922CD5D0076B83A /* PostCell.swift */,
 				03D0E9062922CBF20076B83A /* MainFeedViewController.swift */,
+				03C85F33292EC4A00096AE34 /* customMainFeed.swift */,
 				5252B3E6290EE4A2008CDD30 /* Main.storyboard */,
 				5252B3EB290EE4A3008CDD30 /* LaunchScreen.storyboard */,
 				5252B3EE290EE4A3008CDD30 /* Info.plist */,
@@ -228,6 +231,7 @@
 				52B7614F2923182A002BBB01 /* LoginViewController.swift in Sources */,
 				03D0E9072922CBF20076B83A /* MainFeedViewController.swift in Sources */,
 				52EE39832923255B005A473A /* RegisterViewController.swift in Sources */,
+				03C85F34292EC4A00096AE34 /* customMainFeed.swift in Sources */,
 				5252B3E1290EE4A2008CDD30 /* AppDelegate.swift in Sources */,
 				5243FADE29241A98000CED9E /* TopicsViewController.swift in Sources */,
 				65A0C4782920747E00AD21C4 /* BlogViewController.swift in Sources */,

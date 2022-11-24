@@ -10,15 +10,24 @@ import UIKit
 class PostCell: UITableViewCell {
 
     
-    @IBOutlet weak var postText: UILabel!
+    @IBOutlet weak var postText: CustomLabel!
     @IBOutlet weak var postName: UILabel!
     @IBOutlet weak var postUserName: UILabel!
     @IBOutlet weak var postDate: UILabel!
     @IBOutlet weak var likeCount: UILabel!
+    @IBOutlet weak var postTopic: CustomTopic!
     
-    
-  
-    
+    @IBAction func deleteButton(_ sender: Any) {//handles deleting a post
+        
+    }
+    /* func addTopAndBottomBorders() {
+        let thickness: CGFloat = 2.0
+        let bottomBorder = CALayer()
+        bottomBorder.frame = CGRect(x:0, y: self.frame.size.height - thickness, width: self.frame.size.width, height:thickness)
+        bottomBorder.backgroundColor = UIColor.red.cgColor
+        self.layer.addSublayer(bottomBorder)
+    }
+    */
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
