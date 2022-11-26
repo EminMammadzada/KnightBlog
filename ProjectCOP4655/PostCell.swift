@@ -16,8 +16,11 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postDate: UILabel!
     @IBOutlet weak var likeCount: UILabel!
     @IBOutlet weak var postTopic: CustomTopic!
+    @IBOutlet weak var deleteButton: UIButton!
     
     @IBAction func deleteButton(_ sender: Any) {//handles deleting a post
+        
+        print("Delete pressed")
         
     }
     /* func addTopAndBottomBorders() {

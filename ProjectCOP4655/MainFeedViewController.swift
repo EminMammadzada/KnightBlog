@@ -65,7 +65,11 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         cell.postUserName.text = user.username
         cell.postDate.text = creationDate
         cell.likeCount.text = String((post["likeCount"] as? Int)!)
-        //cell.postTopic.text = post["tags"] as? String //donest work idk why
+        cell.postTopic.text = post["tags"] as? String
+        
+        if user.username != PFUser.current()!.username{
+            cell.deleteButton.isHidden = true
+        }
         return cell;
     }
     
