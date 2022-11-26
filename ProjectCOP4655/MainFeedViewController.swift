@@ -31,7 +31,7 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         super.viewDidAppear(animated)
         
         let query = PFQuery(className: "Blog")
-        query.includeKeys(["author", "likeCount", "text", "tags", "title", "createdAt", "objectId"])
+        query.includeKeys(["author", "likeCount", "text", "tags", "title", "createdAt", "objectId", "likedBy"])
         query.limit = 20
         
         query.findObjectsInBackground { (posts, error) in
@@ -70,6 +70,17 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         if user.username != PFUser.current()!.username{
             cell.deleteButton.isHidden = true
         }
+        
+        if let likedBy = post["likedBy"]{
+            for obj in likedBy as! Sequence{
+                if obj as! String == PFUser.current()!.objectId!{
+                    
+                    cell.likeButton.setImage(UIImage(named: "green_thumbs_up"), for: .normal)
+                    print("equal")
+                }
+            }
+        }
+        
         return cell;
     }
     

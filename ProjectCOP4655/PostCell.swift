@@ -17,12 +17,9 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var likeCount: UILabel!
     @IBOutlet weak var postTopic: CustomTopic!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var likeButton: UIButton!
     
-    @IBAction func deleteButton(_ sender: Any) {//handles deleting a post
-        
-        print("Delete pressed")
-        
-    }
+
     /* func addTopAndBottomBorders() {
         let thickness: CGFloat = 2.0
         let bottomBorder = CALayer()
@@ -36,12 +33,18 @@ class PostCell: UITableViewCell {
         // Initialization code
     }
     
-    
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func deletePressed(_ sender: UIButton) {
+        print("deletePressed")
+    }
+    
+    @IBAction func likePressed(_ sender: UIButton) {
+        print("like pressed")
+    }
+    
 }

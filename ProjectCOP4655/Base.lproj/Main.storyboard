@@ -305,18 +305,12 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;count&quot;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFO-iU-onL">
-                                                    <rect key="frame" x="321" y="207" width="47" height="16"/>
+                                                    <rect key="frame" x="318" y="207" width="50" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTJ-bu-Qut">
-                                                    <rect key="frame" x="300" y="192" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="thumbs up"/>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Computer Science" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15g-oU-WoE" customClass="CustomTopic" customModule="ProjectCOP4655" customModuleProvider="target">
                                                     <rect key="frame" x="268" y="172" width="100" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -344,7 +338,7 @@
                                                         <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                                     </buttonConfiguration>
                                                     <connections>
-                                                        <action selector="deleteButton:" destination="UIm-OZ-hwM" eventType="touchUpInside" id="e7s-cA-2kv"/>
+                                                        <action selector="deletePressed:" destination="UIm-OZ-hwM" eventType="touchUpInside" id="nyd-NP-Ch8"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;TITLE PLACEHOLDER&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJp-3z-xDN">
@@ -354,6 +348,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTJ-bu-Qut">
+                                                    <rect key="frame" x="279" y="201" width="31" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="thumbs up"/>
+                                                    <connections>
+                                                        <action selector="likePressed:" destination="UIm-OZ-hwM" eventType="touchUpInside" id="2le-Cz-58v"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95292776820000002" green="0.96062451599999998" blue="0.97723811859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
@@ -366,6 +370,7 @@
                                             <outlet property="PostName" destination="DJp-3z-xDN" id="1Gn-aF-uRE"/>
                                             <outlet property="PostText" destination="7cm-Ef-DHZ" id="F5Z-Yf-wrS"/>
                                             <outlet property="deleteButton" destination="RoE-CL-3oG" id="xjS-93-k7c"/>
+                                            <outlet property="likeButton" destination="wTJ-bu-Qut" id="cgq-Of-8LG"/>
                                             <outlet property="likeCount" destination="yFO-iU-onL" id="0Jz-Fc-ps1"/>
                                             <outlet property="postDate" destination="tt7-JF-3zX" id="inL-36-b3D"/>
                                             <outlet property="postTopic" destination="15g-oU-WoE" id="Ygt-bD-ret"/>
