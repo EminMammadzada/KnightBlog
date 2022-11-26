@@ -147,6 +147,7 @@ Blog
 | likeCount | Number          | number of likes post has received |
 | text      | String          | content of the blog post          |
 | title     | String          | content of the blog post          |
+| likedBy   | [String]        | list of users who liked this post |
 ### Networking
 
 #### Register Page
