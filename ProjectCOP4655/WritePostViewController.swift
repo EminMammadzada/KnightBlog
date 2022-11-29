@@ -16,12 +16,16 @@ class WritePostViewController: UIViewController {
 
     @IBOutlet weak var dropDownText: UILabel!
     @IBOutlet weak var DropDownView: UIView!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     let dropDown = DropDown()
     let dropDownValues = ["Business Admin", "Computer Science", "Aerospace", "Job Hunt", "Life Advice", "Other"]
     
     
     @IBOutlet weak var Titley1: UITextField!
+    
     var tag:String = "";
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var itemSelected: [Int] = []
@@ -42,18 +46,25 @@ class WritePostViewController: UIViewController {
            self.dropDownText.text = dropDownValues[index]
             
         }
-        
-
-       
-        
-        
-      
-        
     
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.errorLabel.text = "Success!"
+        self.errorLabel.textColor = .green
+    }
+
 
     @IBAction func didPublish(_ sender: Any) {
-         let title = titley.text
+        
+        if titley.text?.count == 0 || postText.text?.count == 0{
+            self.errorLabel.text = "Error: Some fields are empty"
+            self.errorLabel.textColor = .red
+        }
+        
+        
+        else{
+        let title = titley.text
         let body =  postText.text
         
         let post = PFObject(className: "Blogs")
@@ -61,18 +72,25 @@ class WritePostViewController: UIViewController {
         post["author"] = PFUser.current()!
         post["text"] = body
         post["tags"] = tag
-        post.saveInBackground { (success, error) in
-            if success{
-                self.dismiss(animated: true, completion: nil)
-                print("saved")
-            }else{
-                print("error")
+            post.saveInBackground { (success, error) in
+                if success{
+                    self.dismiss(animated: true, completion: nil)
+                    self.errorLabel.text = "Success, your post has been published!"
+                    self.errorLabel.textColor = .green
+                    self.titley.text?.removeAll()
+                    self.postText.text?.removeAll()
+                    print("saved")
+                }else{
+                    print("error")
+                }
             }
         }
     }
     @IBAction func didCancel1(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
-        print("dimiss")
+        self.titley.text?.removeAll()
+        self.postText.text?.removeAll()
+        print("dismiss")
     }
     @objc private func didTapPost(){
             
