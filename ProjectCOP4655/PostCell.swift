@@ -6,6 +6,14 @@
 //
 
 import UIKit
+import Parse
+
+
+protocol CustomCellUpdater: AnyObject {
+    func updateTableView()
+}
+
+
 
 class PostCell: UITableViewCell {
 
@@ -18,6 +26,17 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postTopic: CustomTopic!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
+    
+    
+    var postId: String = ""
+    var isGreen: Bool = false
+    
+    weak var delegate: CustomCellUpdater?
+    
+    
+    func yourFunctionWhichDoesNotHaveASender () {
+        delegate!.updateTableView()
+    }
     
 
     /* func addTopAndBottomBorders() {
@@ -40,7 +59,17 @@ class PostCell: UITableViewCell {
     }
     
     @IBAction func deletePressed(_ sender: UIButton) {
-        print("deletePressed")
+        print("delete pressed")
+        let query = PFQuery(className: "Blog")
+        query.whereKey("objectId", equalTo: postId)
+        query.findObjectsInBackground {
+            (objects, error) -> Void in
+            for object in objects!{
+                (object as PFObject).deleteInBackground()
+                self.yourFunctionWhichDoesNotHaveASender()
+            }
+        }
+        
     }
     
     @IBAction func likePressed(_ sender: UIButton) {
