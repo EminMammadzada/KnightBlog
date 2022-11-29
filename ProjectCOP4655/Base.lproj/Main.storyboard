@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -505,25 +505,27 @@
                                             <constraint firstItem="evO-Bm-ePu" firstAttribute="top" secondItem="Dzp-Cy-7me" secondAttribute="topMargin" id="vU9-0d-O2h"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUb-Ly-DAh">
-                                        <rect key="frame" x="263" y="601" width="127" height="56"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="127" id="1J2-11-86t"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="publish" title="Publish" imagePadding="0.0">
-                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h81-Nl-56R">
-                                        <rect key="frame" x="17" y="608" width="116" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="116" id="YiF-5c-0sM"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxm-vW-J6d">
+                                        <rect key="frame" x="17" y="603" width="109" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="close" title="Cancel">
                                             <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didCancel1:" destination="eDq-Ke-oS7" eventType="touchUpInside" id="BPh-cJ-Y5v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItN-kX-xed">
+                                        <rect key="frame" x="258" y="603" width="112" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="publish" title="Publish">
+                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didPublish:" destination="eDq-Ke-oS7" eventType="touchUpInside" id="jHk-SZ-SCr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -532,23 +534,16 @@
                                     <constraint firstItem="Ht6-iS-YRp" firstAttribute="top" secondItem="eQU-bf-NYv" secondAttribute="bottom" constant="24" id="CtZ-Gd-FwW"/>
                                     <constraint firstAttribute="bottom" secondItem="Dzp-Cy-7me" secondAttribute="bottom" constant="100" id="E6d-hi-5Ro"/>
                                     <constraint firstItem="eQU-bf-NYv" firstAttribute="top" secondItem="pdM-Dg-zTR" secondAttribute="bottom" constant="8" id="GHc-7s-9c7"/>
-                                    <constraint firstItem="hzL-AT-ULg" firstAttribute="leading" secondItem="h81-Nl-56R" secondAttribute="leading" id="Jwy-mg-oQN"/>
                                     <constraint firstItem="pdM-Dg-zTR" firstAttribute="leading" secondItem="eQU-bf-NYv" secondAttribute="leading" id="Lc3-J5-OnD"/>
                                     <constraint firstItem="pdM-Dg-zTR" firstAttribute="leading" secondItem="DHE-mc-CP3" secondAttribute="trailing" constant="8" id="QIC-F9-FA4"/>
                                     <constraint firstItem="hzL-AT-ULg" firstAttribute="leading" secondItem="Ht6-iS-YRp" secondAttribute="leading" id="RYP-J1-E7i"/>
-                                    <constraint firstItem="jUb-Ly-DAh" firstAttribute="top" secondItem="Dzp-Cy-7me" secondAttribute="bottom" constant="88" id="S7s-h1-iEI"/>
                                     <constraint firstItem="DHE-mc-CP3" firstAttribute="top" secondItem="h7v-Xj-TBZ" secondAttribute="topMargin" id="S9v-zZ-Ajm"/>
                                     <constraint firstItem="hzL-AT-ULg" firstAttribute="trailing" secondItem="Ht6-iS-YRp" secondAttribute="trailing" id="Sdd-Ad-b5A"/>
-                                    <constraint firstItem="h81-Nl-56R" firstAttribute="top" secondItem="Dzp-Cy-7me" secondAttribute="bottom" constant="95" id="TIq-ev-7Vc"/>
                                     <constraint firstItem="Dzp-Cy-7me" firstAttribute="leading" secondItem="h7v-Xj-TBZ" secondAttribute="leading" constant="11" id="WSU-qz-Zvv"/>
                                     <constraint firstAttribute="trailing" secondItem="Dzp-Cy-7me" secondAttribute="trailing" constant="20" id="a4j-Pa-1T6"/>
-                                    <constraint firstItem="jUb-Ly-DAh" firstAttribute="baseline" secondItem="h81-Nl-56R" secondAttribute="firstBaseline" id="agn-nT-rxn"/>
                                     <constraint firstItem="pdM-Dg-zTR" firstAttribute="top" secondItem="h7v-Xj-TBZ" secondAttribute="top" constant="20" id="do9-bD-iPD"/>
-                                    <constraint firstItem="jUb-Ly-DAh" firstAttribute="firstBaseline" secondItem="h81-Nl-56R" secondAttribute="baseline" id="mpR-9a-k4W"/>
                                     <constraint firstAttribute="trailing" secondItem="hzL-AT-ULg" secondAttribute="trailing" constant="22" id="oE8-re-Izp"/>
                                     <constraint firstItem="hzL-AT-ULg" firstAttribute="top" secondItem="Ht6-iS-YRp" secondAttribute="bottom" constant="44" id="sM6-7h-46U"/>
-                                    <constraint firstAttribute="trailing" secondItem="jUb-Ly-DAh" secondAttribute="trailing" id="tEk-sF-sSM"/>
-                                    <constraint firstItem="h81-Nl-56R" firstAttribute="baseline" secondItem="jUb-Ly-DAh" secondAttribute="baseline" id="wBr-Io-yzb"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -570,6 +565,8 @@
                     <connections>
                         <outlet property="DropDownView" destination="Dzp-Cy-7me" id="Gl9-hC-KuL"/>
                         <outlet property="dropDownText" destination="evO-Bm-ePu" id="Prt-el-yXw"/>
+                        <outlet property="postText" destination="hzL-AT-ULg" id="uj2-2f-5NK"/>
+                        <outlet property="titley" destination="Ht6-iS-YRp" id="ByJ-Sv-MLa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pA1-vN-EXZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -896,7 +893,7 @@
             <size key="intrinsicContentSize" width="110" height="12"/>
         </designable>
         <designable name="7cm-Ef-DHZ">
-            <size key="intrinsicContentSize" width="153.33333333333334" height="30.333333333333332"/>
+            <size key="intrinsicContentSize" width="133.33333333333334" height="20.333333333333332"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>

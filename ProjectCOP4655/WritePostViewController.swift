@@ -10,11 +10,18 @@ import Parse
 import DropDown
 class WritePostViewController: UIViewController {
 
+
+    @IBOutlet weak var postText: UITextView!
+    @IBOutlet weak var titley: UITextField!
+
     @IBOutlet weak var dropDownText: UILabel!
     @IBOutlet weak var DropDownView: UIView!
     let dropDown = DropDown()
     let dropDownValues = ["Business Admin", "Computer Science", "Aerospace", "Job Hunt", "Life Advice", "Other"]
     
+    
+    @IBOutlet weak var Titley1: UITextField!
+    var tag:String = "";
     override func viewDidLoad() {
         super.viewDidLoad()
         var itemSelected: [Int] = []
@@ -27,16 +34,49 @@ class WritePostViewController: UIViewController {
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
           print("Selected item: \(item) at index: \(index)")
             itemSelected.append(index)
+            tag = item
             print("array is \(itemSelected)")
             self.dropDownText.backgroundColor = UIColor.systemYellow
             dropDownText.layer.masksToBounds = true
             dropDownText.layer.cornerRadius = 7
            self.dropDownText.text = dropDownValues[index]
+            
         }
+        
+
+       
+        
+        
+      
         
     
     }
-    
+
+    @IBAction func didPublish(_ sender: Any) {
+         let title = titley.text
+        let body =  postText.text
+        
+        let post = PFObject(className: "Blogs")
+        post["Title"] = title
+        post["author"] = PFUser.current()!
+        post["text"] = body
+        post["tags"] = tag
+        post.saveInBackground { (success, error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+                print("saved")
+            }else{
+                print("error")
+            }
+        }
+    }
+    @IBAction func didCancel1(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+        print("dimiss")
+    }
+    @objc private func didTapPost(){
+            
+    }
     @IBAction func showDropDown(_ sender: Any) {
         dropDown.show()
     }
