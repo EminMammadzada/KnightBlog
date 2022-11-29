@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -527,6 +527,13 @@
                                             <action selector="didPublish:" destination="eDq-Ke-oS7" eventType="touchUpInside" id="jHk-SZ-SCr"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh7-iV-vct">
+                                        <rect key="frame" x="20" y="138" width="348" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hzL-AT-ULg" firstAttribute="leading" secondItem="DHE-mc-CP3" secondAttribute="leading" id="1Dm-Xe-H5G"/>
@@ -565,6 +572,7 @@
                     <connections>
                         <outlet property="DropDownView" destination="Dzp-Cy-7me" id="Gl9-hC-KuL"/>
                         <outlet property="dropDownText" destination="evO-Bm-ePu" id="Prt-el-yXw"/>
+                        <outlet property="errorLabel" destination="Gh7-iV-vct" id="OVn-dJ-RR1"/>
                         <outlet property="postText" destination="hzL-AT-ULg" id="uj2-2f-5NK"/>
                         <outlet property="titley" destination="Ht6-iS-YRp" id="ByJ-Sv-MLa"/>
                     </connections>
@@ -893,7 +901,7 @@
             <size key="intrinsicContentSize" width="110" height="12"/>
         </designable>
         <designable name="7cm-Ef-DHZ">
-            <size key="intrinsicContentSize" width="133.33333333333334" height="20.333333333333332"/>
+            <size key="intrinsicContentSize" width="153.33333333333334" height="30.333333333333332"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
