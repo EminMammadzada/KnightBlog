@@ -11,10 +11,9 @@ import Parse
 class BlogViewController: UIViewController {
     
     @IBOutlet weak var postAuthor: UILabel!
-    @IBOutlet weak var postDate: UILabel!
     @IBOutlet weak var postTitle: UILabel!
+    @IBOutlet weak var psotDate: UILabel!
     @IBOutlet weak var postText: UILabel!
-    @IBOutlet weak var likeCount: UILabel!
     
     var passedData: String = ""
     var object = PFObject(className: "Blog")
@@ -22,6 +21,10 @@ class BlogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.postText.textColor = .secondarySystemBackground
+        self.postTitle.textColor = .secondarySystemBackground
+        self.postAuthor.textColor = .secondarySystemBackground
+        self.psotDate.textColor = .secondarySystemBackground
     }
     
     
@@ -46,12 +49,15 @@ class BlogViewController: UIViewController {
                     dateFormatter.dateFormat = "MM/dd/YY"
                     let creationDate = dateFormatter.string(from: date)
                     
+                    self.postText.textColor = .black
+                    self.postTitle.textColor = .black
+                    self.postAuthor.textColor = .black
+                    self.psotDate.textColor = .black
                     
                     self.postText?.text = self.object["text"] as? String
-                    self.postDate?.text = creationDate
-                    self.postAuthor?.text = self.object["author"] as? String
+                    self.psotDate?.text = creationDate
+                    self.postAuthor?.text = (self.object["author"] as! PFUser).username
                     self.postTitle?.text = self.object["title"] as? String
-                    self.likeCount?.text = self.object["likeCount"] as? String
                 }
             }
         }catch{

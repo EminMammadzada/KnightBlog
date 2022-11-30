@@ -22,14 +22,11 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postName: UILabel!
     @IBOutlet weak var postUserName: UILabel!
     @IBOutlet weak var postDate: UILabel!
-    @IBOutlet weak var likeCount: UILabel!
     @IBOutlet weak var postTopic: CustomTopic!
     @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var likeButton: UIButton!
     
     
     var postId: String = ""
-    var isGreen: Bool = false
     
     weak var delegate: CustomCellUpdater?
     
@@ -47,9 +44,10 @@ class PostCell: UITableViewCell {
         self.layer.addSublayer(bottomBorder)
     }
     */
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

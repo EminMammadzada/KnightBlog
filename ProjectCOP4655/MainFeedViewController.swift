@@ -24,8 +24,7 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        // Do any additional setup after loading the view.
+//        updateTableView()
 
     }
     
@@ -35,17 +34,18 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func updateTableView(){
-        self.posts.removeAll()
+        
         let query = PFQuery(className: "Blog")
         query.includeKeys(["author", "likeCount", "text", "tags", "title", "createdAt", "objectId", "likedBy"])
         query.limit = 50
         
-        query.findObjectsInBackground { (posts, error) in
-            if posts != nil{
-                self.posts = posts!
-                self.tableView.reloadData()
+            query.findObjectsInBackground { (posts, error) in
+                if posts != nil{
+                    self.posts = posts!
+                }
+                
             }
-        }
+            self.tableView.reloadData()
     }
     
     
@@ -53,9 +53,11 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+    
         let post = posts[indexPath.row]
         let user = post["author"] as! PFUser
         
@@ -79,24 +81,6 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
             print("id is still not there")
         }
         
-        if user.username != PFUser.current()!.username{
-            cell.deleteButton.isHidden = true
-        }
-        
-        if post["likedBy"] != nil{
-            cell.likeCount.text = String((post["likedBy"] as! Array<Any>).count)
-        }
-        if post["likedBy"] == nil{
-            cell.likeCount.text = "0"
-        }
-        
-        if let likedBy = post["likedBy"]{
-            for obj in likedBy as! Array<Any>{
-                if obj as! String == PFUser.current()!.objectId!{
-                    cell.likeButton.backgroundColor = .green
-                }
-            }
-        }
         cell.delegate = self
         
         return cell;
