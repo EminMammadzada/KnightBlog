@@ -17,6 +17,8 @@ class WritePostViewController: UIViewController {
     @IBOutlet weak var dropDownText: UILabel!
     @IBOutlet weak var DropDownView: UIView!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
     
     let dropDown = DropDown()
     let dropDownValues = ["Business Admin", "Computer Science", "Aerospace", "Job Hunt", "Life Advice", "Other"]
@@ -27,6 +29,12 @@ class WritePostViewController: UIViewController {
     var tag:String = "";
     
     override func viewDidLoad() {
+        authorLabel.text = PFUser.current()?.username
+        var date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/YY"
+        let creationDate = dateFormatter.string(from: date)
+        dateLabel.text = creationDate
         self.errorLabel.text = "*"
         self.errorLabel.textColor = .white
         super.viewDidLoad()

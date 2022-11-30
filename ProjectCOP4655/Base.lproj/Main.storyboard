@@ -582,6 +582,8 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="DropDownView" destination="Dzp-Cy-7me" id="Gl9-hC-KuL"/>
+                        <outlet property="authorLabel" destination="pdM-Dg-zTR" id="RxO-0Y-o94"/>
+                        <outlet property="dateLabel" destination="eQU-bf-NYv" id="rLn-Ii-Mb6"/>
                         <outlet property="dropDownText" destination="evO-Bm-ePu" id="Prt-el-yXw"/>
                         <outlet property="errorLabel" destination="Gh7-iV-vct" id="OVn-dJ-RR1"/>
                         <outlet property="postText" destination="hzL-AT-ULg" id="uj2-2f-5NK"/>
