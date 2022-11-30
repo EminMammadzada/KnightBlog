@@ -70,8 +70,4 @@ class PostCell: UITableViewCell {
         
     }
     
-    @IBAction func likePressed(_ sender: UIButton) {
-        print("like pressed")
-    }
-    
 }

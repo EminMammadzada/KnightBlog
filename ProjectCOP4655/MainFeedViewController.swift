@@ -24,7 +24,7 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         tableView.delegate = self
         tableView.dataSource = self
-//        updateTableView()
+        updateTableView()
 
     }
     
@@ -42,10 +42,9 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
             query.findObjectsInBackground { (posts, error) in
                 if posts != nil{
                     self.posts = posts!
+                    self.tableView.reloadData()
                 }
-                
             }
-            self.tableView.reloadData()
     }
     
     
@@ -73,6 +72,10 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
         cell.postUserName.text = user.username
         cell.postDate.text = creationDate
         cell.postTopic.text = post["tags"] as? String
+        
+        DispatchQueue.main.async {
+            cell.deleteButton.isHidden = user.username == PFUser.current()!.username ? false : true
+        }
     
         
         if let id = post.objectId {
