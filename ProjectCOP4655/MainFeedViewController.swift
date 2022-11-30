@@ -41,17 +41,25 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
             print(tags)
         }
         
-        let query = PFQuery(className: "Blog")
+        let tagsQuery = PFQuery(className: "Blog")
+        tagsQuery.whereKey("tags", containedIn: self.tags)
+
+        let userQuery = PFQuery(className: "Blog")
+        userQuery.whereKey("author", equalTo: PFUser.current()!)
+
+        var query = PFQuery()
+        query = PFQuery.orQuery(withSubqueries: [userQuery, tagsQuery])
         query.includeKeys(["author", "likeCount", "text", "tags", "title", "createdAt", "objectId", "likedBy"])
-        query.limit = 50
-        
-            query.findObjectsInBackground { (posts, error) in
-                if posts != nil{
-                    self.posts = posts!
-                    self.tableView.reloadData()
-                }
+
+        query.findObjectsInBackground { (posts, error) in
+            if posts != nil{
+                self.posts = posts!
+                self.tableView.reloadData()
+            } else{
+                print("NO POSTS")
             }
-    }
+        }
+}
     
     
     
