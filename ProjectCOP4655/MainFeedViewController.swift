@@ -15,6 +15,7 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     
     var posts = [PFObject]()
+    var tags : [String] = [""]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,11 @@ class MainFeedViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func updateTableView(){
+        
+        if let tags = PFUser.current()!["tags"] as? [String] {
+            self.tags = tags
+            print(tags)
+        }
         
         let query = PFQuery(className: "Blog")
         query.includeKeys(["author", "likeCount", "text", "tags", "title", "createdAt", "objectId", "likedBy"])
