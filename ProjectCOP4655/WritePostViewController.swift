@@ -27,6 +27,8 @@ class WritePostViewController: UIViewController {
     var tag:String = "";
     
     override func viewDidLoad() {
+        self.errorLabel.text = "*"
+        self.errorLabel.textColor = .white
         super.viewDidLoad()
         var itemSelected: [Int] = []
         dropDownText.text = ""
@@ -53,6 +55,11 @@ class WritePostViewController: UIViewController {
         self.errorLabel.text = "Success!"
         self.errorLabel.textColor = .green
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.errorLabel.text = "*"
+        self.errorLabel.textColor = .white
+    }
 
 
     @IBAction func didPublish(_ sender: Any) {
@@ -67,8 +74,8 @@ class WritePostViewController: UIViewController {
         let title = titley.text
         let body =  postText.text
         
-        let post = PFObject(className: "Blogs")
-        post["Title"] = title
+        let post = PFObject(className: "Blog")
+        post["title"] = title
         post["author"] = PFUser.current()!
         post["text"] = body
         post["tags"] = tag
@@ -79,6 +86,8 @@ class WritePostViewController: UIViewController {
                     self.errorLabel.textColor = .green
                     self.titley.text?.removeAll()
                     self.postText.text?.removeAll()
+                    self.dropDownText.text = ""
+                    self.dropDownText.backgroundColor = .white
                     print("saved")
                 }else{
                     print("error")
