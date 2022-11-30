@@ -89,7 +89,6 @@ class WritePostViewController: UIViewController {
         post["tags"] = tag
             post.saveInBackground { (success, error) in
                 if success{
-                    self.dismiss(animated: true, completion: nil)
                     self.errorLabel.text = "Success, your post has been published!"
                     self.errorLabel.textColor = .green
                     self.titley.text?.removeAll()
