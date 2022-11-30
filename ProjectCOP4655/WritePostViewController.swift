@@ -106,6 +106,8 @@ class WritePostViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
         self.titley.text?.removeAll()
         self.postText.text?.removeAll()
+        self.dropDownText.text = ""
+        self.dropDownText.backgroundColor = UIColor.white
         print("dismiss")
     }
     @objc private func didTapPost(){
