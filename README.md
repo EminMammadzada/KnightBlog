@@ -29,8 +29,7 @@ KnightBlog is a mobile application that allows students at the University of Cen
 
 - [x] Users register with their knights email address, username, and password
 - [x] Users log in with their username and password
-- [ ] Users can subscribe to topics or unsubscribe
-- [ ] Users can like or dislike blog post
+- [x] Users can subscribe to topics or unsubscribe
 - [x] Users can view blog posts
 - [x] Users can write a blog post
 - [x] Users can delete their blog post
